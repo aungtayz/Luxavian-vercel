@@ -62,11 +62,7 @@ const messageObject :Message = {
   };
 }, [socket, room]);
 
-const handleKeyDown = (e: React.KeyboardEvent) => {
-  if (e.key === 'Enter') {
-    sendMessage();
-  }
-};
+
 const sendMessage = () => {
 if(socket && input.trim()) {
   socket.emit("message",input,room)

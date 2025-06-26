@@ -16,12 +16,12 @@ import { Plus } from "lucide-react";
 import { Button } from "./button";
 import { Search } from "lucide-react";
 import {Label} from "./label";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { Input } from "./input";
 import { Newspaper } from "lucide-react";
 import { Contact2 } from "lucide-react";
 
-export default function ProfileNav ({ email, avatar,ename }: { email: string; avatar?: string ; ename: string;}): any {
+export default function ProfileNav ({ email, avatar,ename }: { email: string; avatar?: string ; ename: string;}) {
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [user,SetUser] = useState('')
@@ -31,7 +31,7 @@ const [form, setForm] = useState({
 })
 const postContentfetch = async (e: any) => {
   e.preventDefault();
-  const res = await fetch("http://localhost:5000/api/posts", {
+ await fetch("http://localhost:5000/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -42,23 +42,21 @@ const postContentfetch = async (e: any) => {
   setOpen(false)
 
 }
-const searchOnclick = (e:any) => {
+const searchOnclick = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   e.preventDefault();
-  if(user === '') {
-    alert('Please enter a valid email')
+  if (user === '') {
+    alert('Please enter a valid email');
     return;
   }
-  router.push('/users/user?userId=' + user)
-  
-}
-const handleSearch = (e:any) => {
-e.preventDefault();
-SetUser(e.target.value);
-
-}
-const handleChange = (e: any) => {
+  router.push('/users/user?userId=' + user);
+};
+const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
   e.preventDefault();
-  const {value,name} = e.target;
+  SetUser(e.target.value);
+}
+const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+  e.preventDefault();
+  const { value, name } = e.target;
   setForm(() => {
     return {
       ...form,
@@ -67,7 +65,8 @@ const handleChange = (e: any) => {
       avatar: avatar,
       authorEmail: email,
     }
-  })}
+  });
+};
 
 
 

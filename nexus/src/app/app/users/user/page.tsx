@@ -24,7 +24,7 @@ if(!response.ok) {
 const data = await response.json()
 setUser(data)
 }catch(err) {
-  throw new Error('Cannot get the user')
+  throw new Error('Cannot get the user' + err)
 }
  }
  useEffect(() => {

@@ -15,7 +15,7 @@ import { useState } from "react";
 
 
 import Link from "next/link";
-
+import Image from "next/image";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -47,7 +47,7 @@ export default function Nav() {
 
   <div className="flex items-center p-2 gap-2 bg-background rounded-lg shadow-lg">
     <Link href="/">
-      <img src="/favlogo.png" alt="logo" className="h-10 w-13 rounded-full " />
+      <Image src="/favlogo.png" alt="logo" className="h-10 w-13 rounded-full " />
     </Link>
     <h1 className="bg-background text-foreground"><span className="text-yellow-500 text-lg">L</span>uxavian</h1>
   </div>
@@ -124,7 +124,7 @@ export default function Nav() {
         <DialogFooter className="flex text-align aling-center justify-center">
           {page ? (
             <p>
-              Don't have an account?{" "}
+              Don't have an account?
               <Button variant="link" onClick={() => setpage(false)}>
                 Signup
               </Button>
@@ -268,14 +268,14 @@ export default function Nav() {
         <DialogFooter className="flex text-align aling-center justify-center">
           {page ? (
             <p>
-              Don't have an account?{" "}
+              Don't have an account?
               <Button variant="link" onClick={() => setpage(false)}>
                 Signup
               </Button>
             </p>
           ) : (
             <p>
-              Account already existed?{" "}
+              Account already existed?
               <Button variant="link" onClick={() => setpage(true)}>
                 Login
               </Button>

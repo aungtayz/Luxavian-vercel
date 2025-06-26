@@ -71,7 +71,7 @@ useEffect(() => {
 
 
 
-const postContentfetch = async (e: any) => {
+const postContentfetch = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   e.preventDefault();
   const res = await fetch("http://localhost:5000/api/posts", {
     method: "POST",
@@ -80,9 +80,9 @@ const postContentfetch = async (e: any) => {
     },
     body: JSON.stringify(form),
   });
-setOpen(false)
+  setOpen(false);
 }
-const searchOnclick = (e:any) => {
+const searchOnclick = (e: React.MouseEvent<HTMLButtonElement,MouseEvent>) => {
   e.preventDefault();
   if(user === '') {
     alert('Please enter a valid email')
@@ -91,14 +91,15 @@ const searchOnclick = (e:any) => {
   router.push('/users/user?userId=' + user)
   
 }
-const handleSearch = (e:any) => {
-e.preventDefault();
-SetUser(e.target.value);
-
-}
-const handleChange = (e: any) => {
+const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
   e.preventDefault();
-  const {value,name} = e.target;
+  SetUser(e.target.value);
+}
+const handleChange = (
+  e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) => {
+  e.preventDefault();
+  const { value, name } = e.target;
   setForm(() => {
     return {
       ...form,
@@ -106,8 +107,9 @@ const handleChange = (e: any) => {
       authorName: profile.name,
       avatar: profile.avatar,
       authorEmail: profile.email,
-    }
-  })}
+    };
+  });
+};
 
 
 

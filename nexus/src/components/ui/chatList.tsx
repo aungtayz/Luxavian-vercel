@@ -17,7 +17,7 @@ interface ChatListProps {
 
 export default function ChatList({ func, func_two}: ChatListProps,) {
  const [data, setData] = useState<User[]>([]);
- const [room, setRoom] = useState('');
+
  const [loading, setLoading] = useState(true);
  const [user,setUser] = useState({
   name: '',
@@ -53,13 +53,13 @@ setUser(response);
 
 
   // Make name pair room
-const roomMaker = (a: any, b: any) => {
+const roomMaker = (a: string, b: string) => {
   if (a === undefined || b === undefined) {
     throw new Error('Names cannot be undefined');
   }
 const sorted = [a, b].sort();
 
-setRoom(`${sorted[0]}_and_${sorted[1]}`);
+
 return func(`${sorted[0]}_and_${sorted[1]}`);
 }
 

@@ -4,7 +4,7 @@ import { Avatar,AvatarImage,AvatarFallback} from "./avatar"
 
 
 
-export default function Profile({user}: any) {
+export default function Profile({user}: {user: {name: '', email: '', avatar: ''}}) {
 
  return (
  <div className="flex flex-col   ">
@@ -12,7 +12,7 @@ export default function Profile({user}: any) {
   <Card className="flex justify-center flex-col w-full mx-auto mt-10" style={{ margin: 'auto' }}>
    
    <CardHeader className="flex items-center">
-     <CardTitle className="text-lg">{user.name}'s Profile</CardTitle>
+     <CardTitle className="text-lg">{user.name}<span>&#39;</span> Profile</CardTitle>
      <Avatar>
   <AvatarImage src={user?.avatar} />
   <AvatarFallback>Df</AvatarFallback>

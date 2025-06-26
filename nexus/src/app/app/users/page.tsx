@@ -35,10 +35,10 @@ if (!isAuthenticated) return <div className="w-full flex justify-center items-ce
  return ( 
 <div className="w-full h-full flex justify-center items-center">
   <div className="flex  gap-3 flex-col w-full h-full  ">
- {usersArray.map((i:any ) => {
+ {usersArray.map((i: {name: '',avatar: '', email: ''} ) => {
 
  return (
-<Link style={{
+<Link key={Math.random()} style={{
   width: '100%',
   height: '100%',
 

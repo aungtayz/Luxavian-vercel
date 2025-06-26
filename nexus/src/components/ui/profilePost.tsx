@@ -5,14 +5,14 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Trash2 } from "lucide-react"
 
 
-export default function ProfilePost({user}: any) {
+export default function ProfilePost({user}: {user: {name: '', email: '', avatar: ''}}) {
 interface Post {
   content: string;
   createdAt: string;
 }
 
 const [posts, setPosts] = useState<Post[]>([])
-const [loading, setLoading] = useState(true)
+
 const fetchPosts = async () => {
  const res = await fetch('http://localhost:5000/api/posts/me', {
   method: 'GET',
@@ -26,7 +26,7 @@ setPosts(data)
 }
 
 useEffect(() => {
- fetchPosts().finally(() => {setLoading(false)} )
+ fetchPosts() 
 },[])
 const postArray =  posts.map((i) => {
 const date = i.createdAt.slice(0,10)

@@ -6,14 +6,14 @@ import { useAuth } from "@/app/hooks/authprovider";
 import ChatList from "@/components/ui/chatList";
 import { useState } from "react";
 export default function ChatPage () {
-const { isAuthenticated,user, loading,  } = useAuth();
+const { isAuthenticated,  } = useAuth();
 const [room, setRoom] = useState('');
 const [sender,setSender] = useState('')
-const roomUpdate = (k: any)=> {
+const roomUpdate = (k: string)=> {
   setRoom(k);
 }
 
-const userUpdate = (k: any) => {
+const userUpdate = (k: string) => {
   setSender(k);
 }
 

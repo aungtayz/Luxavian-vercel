@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useEffect,useState } from "react";
 
 export default function Newsfeed() {
- const {loading,user,isAuthenticated} = useAuth()
+ const {loading,isAuthenticated} = useAuth()
 const [feedsArray, setFeedsArray] = useState([])
  const newsFeedsFetch = async () => {
  const response = await fetch('http://localhost:5000/api/posts/feeds')
@@ -33,13 +33,21 @@ if (!isAuthenticated) return <div className="w-full flex justify-center items-ce
 
 return(
 <div className="w-full flex flex-col gap-3">
-{feedsArray.map((i: any) => {
+{feedsArray.map((i: {
+  id: string | number;
+  createdAt: string;
+  avatar?: string;
+  authorName: string;
+  authorEmail: string;
+  email?: string;
+  content: string;
+}) => {
 
   const date = i.createdAt.slice(0,10)
  return(
   
 
-  <Card key={Math.random()} className="w-full ">
+  <Card key={i.id ?? Math.random()} className="w-full ">
 <CardHeader className="flex flex-row gap-2 justify-between ">
   
 <div className="flex gap-2 align-center flex-row">

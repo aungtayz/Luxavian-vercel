@@ -1,9 +1,9 @@
 "use client";
 import {io, Socket} from 'socket.io-client';
-import {useEffect, useState, useRef} from 'react';
+import {useEffect, useState} from 'react';
 
 
-let socket : Socket | null = null
+const socket : Socket | null = null
 export function useSocket () {
 
 const [instance, setInstance] = useState<Socket | null> (null)
