@@ -73,7 +73,7 @@ useEffect(() => {
 
 const postContentfetch = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   e.preventDefault();
-  const res = await fetch("http://localhost:5000/api/posts", {
+   await fetch("http://localhost:5000/api/posts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

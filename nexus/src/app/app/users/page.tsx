@@ -45,7 +45,8 @@ if (!isAuthenticated) return <div className="w-full flex justify-center items-ce
 }} href={'/app/users/user?userId=' + i.email}>
   <Card className="flex justify-center mx-auto flex-col md:w-full w-64 h-64">
     <CardHeader className="flex items-center">
-      <CardTitle className="text-sml lg:text-2xl" style={{ display: 'flex', whiteSpace: 'nowrap' }}>{i.name}'s Profile</CardTitle>
+      <CardTitle className="text-sml lg:text-2xl" style={{ display: 'flex', whiteSpace: 'nowrap' }}>{i.name}<span>&#39;</span>
+ Profile</CardTitle>
       <Avatar>
         <AvatarImage src={i.avatar} />
         <AvatarFallback>Df</AvatarFallback>

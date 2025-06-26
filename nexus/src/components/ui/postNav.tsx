@@ -16,7 +16,7 @@ import { Plus } from "lucide-react";
 import { Button } from "./button";
 import { Search } from "lucide-react";
 import {Label} from "./label";
-import { ChangeEvent, useState } from "react";
+import {  useState } from "react";
 import { Input } from "./input";
 import { Newspaper } from "lucide-react";
 import { Contact2 } from "lucide-react";
@@ -29,7 +29,7 @@ const [form, setForm] = useState({
   content: "",
   authorEmail: "",
 })
-const postContentfetch = async (e: any) => {
+const postContentfetch = async (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   e.preventDefault();
  await fetch("http://localhost:5000/api/posts", {
     method: "POST",

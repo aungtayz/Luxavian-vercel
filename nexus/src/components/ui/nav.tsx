@@ -124,7 +124,8 @@ export default function Nav() {
         <DialogFooter className="flex text-align aling-center justify-center">
           {page ? (
             <p>
-              Don't have an account?
+              Don<span>&#39;</span>
+t have an account?
               <Button variant="link" onClick={() => setpage(false)}>
                 Signup
               </Button>
@@ -268,7 +269,8 @@ export default function Nav() {
         <DialogFooter className="flex text-align aling-center justify-center">
           {page ? (
             <p>
-              Don't have an account?
+              Don<span>&#39;</span>
+t have an account?
               <Button variant="link" onClick={() => setpage(false)}>
                 Signup
               </Button>
