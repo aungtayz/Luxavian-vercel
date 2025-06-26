@@ -2,12 +2,11 @@
 import Link from "next/link";
 import { Avatar,AvatarFallback,AvatarImage } from "@radix-ui/react-avatar";
 import { Card,CardContent,CardHeader,CardTitle } from "@/components/ui/card";
-import { use, useEffect,useState } from "react";
-import { redirect } from "next/dist/server/api-utils";
+import {  useEffect,useState } from "react";
 import LoginCom from "@/components/ui/login";
 import { useAuth } from "@/app/hooks/authprovider";
 export default  function Users() {
-  const { isAuthenticated, loading, user } = useAuth()
+  const { isAuthenticated, loading  } = useAuth()
 const [usersArray, setUsersArray] = useState([])
 const usersFetch = async () => {
   const response = await fetch('http://localhost:5000/api/users/', {

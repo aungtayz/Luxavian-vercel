@@ -1,7 +1,6 @@
 
 import Main from "@/components/ui/main";
 import Footer from "@/components/ui/footer";
-import Nav from "@/components/ui/nav";
 import Pichart from "@/components/ui/pichart";
 
 

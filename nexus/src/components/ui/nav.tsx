@@ -5,7 +5,6 @@ import { LucideMenu } from "lucide-react";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogFooter,
@@ -20,12 +19,10 @@ import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
 import {
   DropdownMenu,
@@ -35,9 +32,8 @@ import {
 } from "@/components/ui/dropdown-menu"
 import SignupCom from "@/components/ui/signup"
 import LoginCom from "@/components/ui/login"
-import {Label} from "@/components/ui/label"
 import * as React from "react"
-import { Moon, Radius, Sun } from "lucide-react"
+import { Moon,  Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from '@/components/ui/button'

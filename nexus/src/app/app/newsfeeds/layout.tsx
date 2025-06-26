@@ -1,7 +1,7 @@
 
 import Footer from "@/components/ui/footer"
 import AppSide from "@/components/ui/appside";
-import {Sidebar,SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
+import {SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
 export default function NewsfeedLayout({
   children,
 }: {

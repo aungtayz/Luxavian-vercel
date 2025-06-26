@@ -16,7 +16,7 @@ import { Plus } from "lucide-react";
 import { Button } from "./button";
 import { Search } from "lucide-react";
 import {Label} from "./label";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { Input } from "./input";
 import { Newspaper } from "lucide-react";
 import { Contact2 } from "lucide-react";

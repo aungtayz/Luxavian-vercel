@@ -3,7 +3,7 @@ import AppSide from "@/components/ui/appside";
 
 import Footer from "@/components/ui/footer";
 import React from "react";
-import {Sidebar,SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
+import {SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
 
 export default function UsersLayout({children}: {
  children: React.ReactNode

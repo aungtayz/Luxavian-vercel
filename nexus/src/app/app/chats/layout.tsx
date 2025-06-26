@@ -1,6 +1,5 @@
 
 import AppSide from "@/components/ui/appside"
-import Nav from "@/components/ui/nav"
 import { SidebarProvider,SidebarTrigger } from "@/components/ui/sidebar"
 export default function ChatLayout ({children}: {
  children: React.ReactNode

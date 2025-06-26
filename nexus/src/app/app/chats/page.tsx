@@ -1,17 +1,14 @@
 "use client"
 import Chat from "@/components/ui/chat";
-import { Sidebar,SidebarProvider,SidebarTrigger } from "@/components/ui/sidebar";
+import {SidebarProvider,SidebarTrigger } from "@/components/ui/sidebar";
 import LoginCom from "@/components/ui/login";
 import { useAuth } from "@/app/hooks/authprovider";
-import CheckAuthPage from "@/components/ui/checkAuth";
-import {Card,CardContent,CardDescription, CardTitle} from '@/components/ui/card'
 import ChatList from "@/components/ui/chatList";
-import { useEffect,useState } from "react";
+import { useState } from "react";
 export default function ChatPage () {
 const { isAuthenticated,user, loading,  } = useAuth();
 const [room, setRoom] = useState('');
 const [sender,setSender] = useState('')
-const [messages, setMessages] = useState([])
 const roomUpdate = (k: any)=> {
   setRoom(k);
 }

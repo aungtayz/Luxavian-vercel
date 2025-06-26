@@ -1,11 +1,10 @@
 "use client";
 import { useAuth } from "@/app/hooks/authprovider";
 import LoginCom from "@/components/ui/login";
-import {Card,CardContent,CardDescription,CardFooter, CardHeader} from "@/components/ui/card"
+import {Card,CardContent, CardHeader} from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { useEffect,useState } from "react";
-import { Children } from "react";
-import { set } from "zod";
+
 export default function Newsfeed() {
  const {loading,user,isAuthenticated} = useAuth()
 const [feedsArray, setFeedsArray] = useState([])

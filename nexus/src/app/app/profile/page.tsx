@@ -1,15 +1,10 @@
 "use client";
-import Footer from "@/components/ui/footer";
-import Nav from "@/components/ui/nav";
-import {useState, useEffect} from "react";
+
 import { useAuth } from "@/app/hooks/authprovider";
-import CheckAuthPage from "@/components/ui/checkAuth";
 import React,{ Suspense } from "react";
 import LoginCom from "@/components/ui/login";
-import { Card } from "@/components/ui/card";
 import Profile from "@/components/ui/profile";
 import ProfilePost from "@/components/ui/profilePost";
-import ProfileNav from "@/components/ui/postNav";
 import Loading from "@/components/ui/loading";
 
 export default  function NewFeeds () {

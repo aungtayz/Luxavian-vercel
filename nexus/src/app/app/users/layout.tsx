@@ -1,10 +1,7 @@
-import Nav from "@/components/ui/nav";
 import AppSide from "@/components/ui/appside";
-import Profile from "@/components/ui/profile";
 import Footer from "@/components/ui/footer";
 import React from "react";
-import {Sidebar,SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
-import { Card } from "@/components/ui/card";
+import {SidebarTrigger,SidebarProvider} from "@/components/ui/sidebar";
 export default function UsersLayout({children}: {
  children: React.ReactNode
 })

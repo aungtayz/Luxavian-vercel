@@ -2,7 +2,7 @@
 import Nav from "@/components/ui/nav"
 import Footer from "@/components/ui/footer"
 import Pichart from "@/components/ui/pichart"
-import { Metadata } from "next"
+
 
 
 

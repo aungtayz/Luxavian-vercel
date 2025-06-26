@@ -1,8 +1,6 @@
-import { Card,CardHeader,CardDescription,CardTitle,CardContent } from "./card"
+import { Card,CardHeader,CardTitle,CardContent } from "./card"
 import { Avatar,AvatarImage,AvatarFallback} from "./avatar"
-import { Button } from "./button"
-import { useEffect,useState } from "react"
-import ProfileNav from "./postNav"
+
 
 
 
