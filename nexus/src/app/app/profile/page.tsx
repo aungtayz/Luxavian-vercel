@@ -23,11 +23,11 @@ export default  function NewFeeds () {
     
       
         <div className="flex flex-col mx-auto flex-grow" >
-            <div className="flex gap-2 flex-col w-full mx-auto h-full">
+            {user && (<div className="flex gap-2 flex-col w-full mx-auto h-full">
                 <Profile user={user} />
                 <ProfilePost user={user} />
                 
-            </div>
+            </div>)}
         </div>
 
       

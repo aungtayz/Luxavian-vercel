@@ -8,9 +8,9 @@ type User = {
   name: string;
   avatar?: string;
 };
-
+ 
 type AuthContextType = {
-  user: User | null;
+  user: User | null; // User can be null if not authenticated
   loading: boolean;
   isAuthenticated: boolean;
   logout: () => Promise<void>;

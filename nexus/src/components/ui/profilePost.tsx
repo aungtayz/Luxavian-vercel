@@ -4,8 +4,16 @@ import {Card,CardContent, CardHeader} from "@/components/ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Trash2 } from "lucide-react"
 
+interface profileProps {
+  user: {
+    email: string;
+    gooogleId?: string;
+    name: string;
+    avatar?: string
+  }
+}
 
-export default function ProfilePost({user}: {user: {name: '', email: '', avatar: ''}}) {
+export default function ProfilePost({user}: profileProps) {
 interface Post {
   content: string;
   createdAt: string;
